@@ -1,38 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.middle {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 100%;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: white;
+  font-family: Montserret, sans-serif;
+  text-shadow: 1px 1px 2px #474747;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
