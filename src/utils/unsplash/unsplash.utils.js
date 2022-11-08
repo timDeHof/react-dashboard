@@ -1,7 +1,7 @@
-const clientId = "nSo2MiQC5C7iz5uBHPFNOPs0imhsaUJr7dlL6bGAMXU";
-const endpoint = `https://api.unsplash.com/photos/random/?client_id=${clientId}`;
-const orientation = "&orientation=landscape";
-const query = "&query=nature";
+const clientId = "nSo2MiQC5C7iz5uBHPFNOPs0imhsaUJr7dlL6bGAMXU"
+const endpoint = `https://api.unsplash.com/photos/random/?client_id=${clientId}`
+const orientation = "&orientation=landscape"
+const query = "&query=nature"
 
 // default values for background image
 export const imageData = {
@@ -11,20 +11,17 @@ export const imageData = {
   author: "",
   authorUrl: "",
   location: "",
-};
+}
 export const getBackgroundImage = async () => {
   try {
-    const res = await fetch(endpoint + orientation + query);
-    const data = await res.json();
-    imageData.url = data.urls.raw;
-    imageData.author = data.user.username;
-    document.body.style.backgroundImage = `url(${imageData.url})`;
-    // document.getElementById(
-    //   "author"
-    // ).innerHTML = `By: <a href="https://unsplash.com/@${authorName}">${authorName}</a>`;
+    const res = await fetch(endpoint + orientation + query)
+    const data = await res.json()
+    imageData.url = data.urls.raw
+    imageData.author = data.user.username
+    document.body.style.backgroundImage = `url(${imageData.url})`
   } catch (error) {
-    const defaultImg = imageData.defaultUrl;
+    const defaultImg = imageData.defaultUrl
 
-    document.body.style.backgroundImage = `url(${defaultImg})`;
+    document.body.style.backgroundImage = `url(${defaultImg})`
   }
-};
+}
